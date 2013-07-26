@@ -1,0 +1,342 @@
+\section{Hardware}
+
+\begin{frame}\frametitle{Funding}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Grants from US Army Research Office
+\item
+  Various research groups from across campus
+\item
+  Hardware donations from:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    AMD
+  \item
+    NVIDIA
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Hardware Overview}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  86.7 Tflops SP (GPU)
+\item
+  11.5 Tflops DP (GPU)
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    10.0 Tflops DP (CPU)
+  \end{itemize}
+\item
+  60 NVIDIA GPUs
+\item
+  1 Intel Xeon Phi
+\item
+  1148 CPU cores
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    1024 AMD
+  \item
+    124 Intel
+  \end{itemize}
+\item
+  2.7 TB RAM
+\item
+  36 TB storage
+\item
+  40Gbps Infiniband interconnect (QDR)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{NVIDIA GPU Compute Nodes}
+
+\begin{itemize}
+\item
+  40x GeForce GTX 480
+\item
+  8x GeForce GTX 680
+\item
+  8x Tesla C20x0
+\item
+  4x Tesla K20x
+\item
+  14x main GPU compute nodes:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    2x Intel Xeon E5520 2.26GHz
+  \item
+    48GB RAM
+  \item
+    4x GPUs
+  \end{itemize}
+\item
+  1x dev GPU node:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    2x Intel Xeon E5-2630 2.30GHz
+  \item
+    64GB RAM
+  \item
+    4x Tesla K20x
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      sometimes 3x, plus Xeon Phi
+    \end{itemize}
+  \end{itemize}
+\item
+  Torque resource flags: gpu, tesla, kepler
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{AMD CPU Compute Nodes}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  16x CPU compute nodes
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    4x AMD Opteron 6274 2.20GHz
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      total of 64 cores per machine
+    \end{itemize}
+  \item
+    128GB RAM
+  \end{itemize}
+\item
+  Torque resource flags: cpu, amd
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{File server}
+
+\begin{itemize}
+\item
+  Two identical systems, mirrored
+\item
+  24x 2TB WD RE4 drives
+\item
+  RAID6
+\item
+  NO BACKUPS
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    be sure to push your code to another server
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{Software}
+
+\begin{frame}\frametitle{Software Overview}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Scientific Linux 6.2
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    upgrade to CentOS 6.4 planned
+  \end{itemize}
+\item
+  xCAT for node management
+\item
+  TORQUE for job scheduling and management
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    might switch to HTCondor, pending discussions next week
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Available Software}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Development
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    AMD CodeAnalyst
+  \item
+    Boost 1.5\{1,2,3\}
+  \item
+    Cray Chapel
+  \item
+    CUDA \{3.2,4.0-4.2,5.0,5.5\}
+  \item
+    GCC 4.\{4,6,7,8,9\}
+  \item
+    Intel Compilers (license req'd)
+  \item
+    Python \{2.6,2.7,3.3\}
+  \end{itemize}
+\item
+  MPI
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Intel MPI (license req'd)
+  \item
+    MVAPICH
+  \item
+    MVAPICH2
+  \item
+    OpenMPI
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Other Software}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Graphics
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Blender
+  \item
+    LuxRender
+  \item
+    Pixar Renderman
+  \item
+    Paraview
+  \item
+    Point Cloud Library (PCL)
+  \item
+    VTK
+  \end{itemize}
+\item
+  Engineering
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    MATLAB (license req'd)
+  \item
+    Mathematica (license req'd)
+  \item
+    MSC ADAMS (license req'd)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{Using TORQUE}
+
+\begin{frame}[fragile]\frametitle{Job Configuration}
+
+\begin{itemize}
+\item
+  Jobs are configured and run via basic shell scripts
+  (\textasciitilde{}/Example Jobs/gpu-scan.sh):
+
+\begin{verbatim}
+#!/bin/sh
+#PBS -N gpu-scan
+#PBS -l nodes=1:gpus=1,walltime=00:01:00
+
+cd $PBS_O_WORKDIR
+$NVSDKCOMPUTE_ROOT/C/bin/linux/release/scan 
+\end{verbatim}
+\end{itemize}
+
+\texttt{-N gpu-scan}: job name is \texttt{gpu-scan}
+
+\texttt{nodes=1}: give me one node, one CPU
+
+\texttt{gpus=1}: give me one GPU
+
+\texttt{walltime=00:01:00}: this job only requires one minute of wall
+time
+
+\end{frame}
+
+\begin{frame}\frametitle{Submitting Jobs}
+
+\begin{itemize}
+\item
+  To submit:
+
+  \texttt{qsub \textasciitilde{}/Example Jobs/gpu-scan.sh}
+\item
+  For an `interactive job', use \texttt{qsub -I}
+
+  \begin{itemize}
+  \item
+    if you need X11, use \texttt{qsub -X -I}
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      be sure you forwarded X for you SSH session: \texttt{ssh -X euler}
+    \end{itemize}
+  \item
+    you can use \texttt{-l} resource flags for different resources:
+
+    \texttt{qsub -I -l nodes=1:ppn=8:gpus=2:tesla}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Monitoring Jobs}
+
+\begin{itemize}
+\item
+  Use \texttt{qstat} to monitor job status
+
+  \texttt{qstat -u \$USER}
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{S} column shows status: \texttt{Q}: queued, \texttt{R}:
+    running, \texttt{C}: complete
+  \end{itemize}
+\item
+  On completion, TORQUE will place \texttt{stdout}, \texttt{stderr}
+  messages under jobname-\{o,e\}jobid
+\end{itemize}
+
+\end{frame}

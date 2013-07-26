@@ -1,0 +1,26 @@
+\frametitle{Job Configuration}
+
+\begin{itemize}
+\item
+  Jobs are configured and run via basic shell scripts
+  (\textasciitilde{}/Example Jobs/gpu-scan.sh):
+
+\begin{verbatim}
+#!/bin/sh
+#PBS -N gpu-scan
+#PBS -l nodes=1:gpus=1,walltime=00:01:00
+
+cd $PBS_O_WORKDIR
+$NVSDKCOMPUTE_ROOT/C/bin/linux/release/scan
+\end{verbatim}
+\end{itemize}
+
+\texttt{-N gpu-scan}: job name is \texttt{gpu-scan}
+
+\texttt{nodes=1}: give me one node, one CPU
+
+\texttt{gpus=1}: give me one GPU
+
+\texttt{walltime=00:01:00}: this job only requires one minute of wall
+time
+
