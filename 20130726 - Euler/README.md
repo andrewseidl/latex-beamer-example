@@ -1,3 +1,13 @@
+This is an example LaTeX Beamer presentation that I created around 2013-07-26
+describing the Euler Compute Cluster that I managed on behalf of the Wisconsin
+Applied Computing Center. The source content resides in `eulerDescription.md`,
+which is then passed to Pandoc to create the .tex file, which is then used to
+create a PDF.
+
+Output is provided in `main.pdf`.
+
+## Original README
+
 This is a Beamer template set up to look pretty decent and have a
 University of Wisconsin theme.  It is, of course, better than the
 existing Powerpoint templates.
